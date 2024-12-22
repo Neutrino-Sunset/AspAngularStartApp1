@@ -1,1 +1,144 @@
-/* You can add global styles to this file, and also import other style files */
+
+:root {
+  --foreground1: #000000;
+  --background1: #ffffff;
+  --border: gainsboro;
+  --primary-accent: #0d6efd;
+  --primary-accent-hover: #0b5ed7;
+  --secondary-accent: gray;
+  --secondary-accent-hover: #696969;
+}
+
+body {
+  margin: 0px;
+  font-family: "Segoe UI", sans-serif;
+}
+
+h1, h2 {
+  font-weight: normal;
+}
+
+app-header header {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  padding: 0rem 1.2rem;
+  height: 3rem;
+  border-bottom: 1px solid var(--border);
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+app-header ol {
+  display: flex;
+  align-items: center;
+  margin: 0px;
+  padding: 0px;
+  height: 100%;
+}
+
+app-header li {
+  list-style-type: none;
+  display: inline-block;
+  margin-right: 1rem;
+}
+
+app-header a {
+  text-decoration: none;
+}
+
+app-header h1 {
+  margin: 0px;
+}
+
+app-header h1 > a {
+  color: var(--foreground1);
+  font-size: 1.2rem;
+}
+
+app-header li > a {
+  color: var(--secondary-accent);
+}
+
+app-header li > a:hover {
+  color: var(--foreground1);
+}
+
+app-header li > a.active {
+  color: var(--foreground1);
+}
+
+/* Form elements have their styles set by a browser style sheet for form elements, so to pick up styles
+   set in the application style sheet, inherit must be set explicitly. */
+button {
+  color: var(--background1);
+  border: none;
+  border-radius: 0.3rem;
+  padding: 0.4rem 0.7rem;
+  line-height: 1.5;
+  text-align: center;
+  font-family: inherit;
+  font-size: inherit;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+button.primary {
+  background: var(--primary-accent);
+}
+
+button.primary:hover {
+  background: var(--primary-accent-hover);
+}
+
+button.secondary {
+  background: var(--secondary-accent);
+}
+
+button.secondary:hover {
+  background: var(--secondary-accent-hover);
+}
+
+section {
+  border: 1px solid var(--border);
+  border-radius: 0.3rem;
+  margin: 1rem 2rem;
+  padding: 1rem;
+  text-align: center;
+}
+
+section h2 {
+  margin: 0rem 0rem 1rem 0rem;
+}
+
+section menu {
+  margin: 0rem;
+  padding: 0rem;
+  text-align: right;
+}
+
+app-footer {
+  color: var(--secondary-accent);
+  padding: 0rem 1.2rem;
+  border-top: 1px solid var(--border);
+}
+
+
+/* Fix footer to bottom of page or content. */
+
+html {
+  height: 100%;
+}
+
+body, app-root {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+app-root > main {
+  flex: 1 0 auto;
+}
+
+app-footer {
+  flex-shrink: 0;
+}
